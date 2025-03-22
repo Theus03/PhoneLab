@@ -1,0 +1,66 @@
+l<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../icons/logo.png" type="image/x-icon">
+    <title>PhoneLab - Home</title>
+    <link rel="stylesheet" href="./public/src/styles/style.css">
+</head>
+<body>
+    <header>
+        <div class="container-header">
+            <img src="./public/src/img/logo.png" alt="" class="img-logo">
+            <h2 class="title-logo">PhoneLab</h2>
+        </div>
+    </header>
+    <main id="container-main">
+        <section class="section-title">
+            <h2 class="text-title-section">Gerenciamento dos Celulares</h2>
+            <a class="text-new-phone" onclick="Modal.openModal()">+ Adicionar Novo Celular</a>
+        </section>
+        <section class="section-table">
+            <table id="data-table">
+                <thead>
+                    <tr>
+                        <th>Modelo</th>
+                        <th>Marca</th>
+                        <th>Armazenamento</th>
+                        <th>Memória(RAM)</th>
+                        <th>Bateria</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <div class="modal-overlay">
+        <div class="modal">
+            <form id="form" class="modal-form">
+                <div class="form-header">
+                    <a href="" onclick="Modal.closeModal()"><img src="./public/src/img/back-arrow.png" alt="" class="img-arrow-back"></a>
+                    <h2 class="modal-title">Registrar Novo Celular</h2>
+                </div>
+                <div class="input-group">
+                    <input type="text" id="modelo" data-index="new" class="modal-field" placeholder="Modelo">
+                    <input type="text" id="marca" class="modal-field" placeholder="Marca">
+                    <input type="text" id="armazenamento" class="modal-field" placeholder="Armazenamento">
+                    <input type="text" id="memoria" class="modal-field" placeholder="Memória(RAM)">
+                    <input type="text" id="bateria" class="modal-field" placeholder="Bateria">
+                </div>
+                <div class="input-buttons">
+                    <button class="button-cancel" onclick="Modal.closeModal()">Cancelar</button>
+                    <button id="addPhone" class="button-add">Salvar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <h3 class="text-footer">&copy;PhoneLab</h3>
+    </footer>
+<script src="./public/src/scripts/script.js"></script>
+</body>
+</html>
